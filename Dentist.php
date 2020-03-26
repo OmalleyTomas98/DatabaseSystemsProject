@@ -20,6 +20,9 @@
     <th>PatientName</th>
     <th>Room</th>
     <th>Time</th>
+    <th>Delete</th>
+    <th>Edit</th>
+
     </tr>
     <?php
 
@@ -42,6 +45,8 @@
         . $row["Room"]             . "</td><td>"  
         . $row["Time"]             . "</td><td>" 
                                    . "</tr></td>";
+        echo "<td><a href=delete.php?id=".$row['AppointmentID'].">Delete</a></td>";
+
     }
     echo "</table>";   
 }
