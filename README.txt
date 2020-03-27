@@ -1,5 +1,9 @@
 # DatabaseSystemsProject
+<<<<<<< HEAD
 3rd year Software Development @ Galway Mayo Institute of Technology : Module - Database Management Systems
+=======
+3rd year Software Development @ Galway Mayo Institute of Technology : Module - Database ManagementSystems
+>>>>>>> efef61d9fd4acb11cfb8fef3e41f45f80c64488a
 
 
 
@@ -14,6 +18,10 @@ Year of Study :  3
 Username  :moss_omalley
 password  :adminPass2020
 CLOUD IP ADDRESS : 10.128.0.1
+<<<<<<< HEAD
 ----------------------------
 root
 ""
+=======
+
+>>>>>>> efef61d9fd4acb11cfb8fef3e41f45f80c64488a
