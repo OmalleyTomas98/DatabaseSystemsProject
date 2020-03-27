@@ -23,12 +23,6 @@
 include("Header.php");
 print <<<HERE
 
-
-
-
-
-
-
 <h2>Add a Patient</h2>
 <form action="add.php" method="POST" enctype="multipart/form-data">
 <div>
@@ -36,9 +30,6 @@ print <<<HERE
 <input type ="text" name="PatientName" id="PatientName" required="required">
 </div>
 <div>
-
-
-
 
 <label for="DoctorName">DoctorName*:</label>
 <input type ="text" name="DoctorName" id="DoctorName" required="required">

@@ -13,49 +13,12 @@
 
 
     <tr>
-    <th>AppointmentID</th>
-    <th>DoctorName</th>
-    <th>PatientCondition</th>
-
-    <th>PatientName</th>
-    <th>Room</th>
-    <th>Time</th>
-    <th>Delete</th>
-    <th>Edit</th>
-
+    <th>Dentist Application</th>
+  
     </tr>
     <?php
 
-    $conn = mysqli_connect("localhost:3308","root", "" , "dentalpractice");
-    if($conn -> connect_error){
-        die("Connection failed". $conn -> connect_error);
-    }
 
-    $sql = "SELECT  AppointmentID , DoctorName  , PatientCondition , PatientName , Room , Time   from appointment";
-    $result = $conn -> query($sql);
-    
-    if ($result -> num_rows > 0)
-    {
-        while($row = $result-> fetch_assoc()){
-        echo "<tr><td>"
-        . $row["AppointmentID"]    . "</td><td>"  
-        . $row["DoctorName"]       . "</td><td>"
-        . $row["PatientCondition"] . "</td><td>"
-        . $row["PatientName"]      . "</td><td>" 
-        . $row["Room"]             . "</td><td>"  
-        . $row["Time"]             . "</td><td>" 
-                                   . "</tr></td>";
-        echo "<td><a href=delete.php?id=".$row['AppointmentID'].">Delete</a></td>";
-
-    }
-    echo "</table>";   
-}
-
-else {
-    echo "0 result";
-}
-
-$conn -> close();
 
 include("Header.php");
 

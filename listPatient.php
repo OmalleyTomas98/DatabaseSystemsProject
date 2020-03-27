@@ -13,13 +13,19 @@
 
 
     <tr>
-    <th>AppointmentID</th>
-    <th>DoctorName</th>
-    <th>PatientCondition</th>
+    <th>Address</th>
+    <th>Balance</th>
+    <th>Doctor</th>
 
-    <th>PatientName</th>
+    <th>Email</th>
     <th>Room</th>
-    <th>Time</th>
+    <th>ID</th>
+    <th>LastAppointment</th>
+    <th>Patient_Condition</th>
+    <th>PhoneNo</th>
+    <th>Scan</th>
+
+
     </tr>
     <?php
 
@@ -28,22 +34,33 @@
         die("Connection failed". $conn -> connect_error);
     }
 
-    $sql = "SELECT  AppointmentID , DoctorName  , PatientCondition , PatientName , Room , Time   from appointment";
+    $sql = "SELECT  Address , Balance   , Doctor , Email , ID , LastAppointment ,  Patient_Condition , PhoneNo , Scan from patient";
     $result = $conn -> query($sql);
     
     if ($result -> num_rows > 0)
     {
         while($row = $result-> fetch_assoc()){
         echo "<tr><td>"
-        . $row["AppointmentID"]    . "</td><td>"  
-        . $row["DoctorName"]       . "</td><td>"
-        . $row["PatientCondition"] . "</td><td>"
-        . $row["PatientName"]      . "</td><td>" 
-        . $row["Room"]             . "</td><td>"  
-        . $row["Time"]             . "</td><td>" 
+        . $row["Address"]    . "</td><td>"  
+        . $row["Balance"]       . "</td><td>"
+        . $row["Doctor"] . "</td><td>"
+        . $row["Email"]      . "</td><td>" 
+        . $row["ID"]             . "</td><td>"  
+        . $row["LastAppointment"]             . "</td><td>" 
+
+        .$row["Patient_Condition"]             . "</td><td>" 
+        .$row["PhoneNo"]                      . "</td><td>" 
+
+
+
                                    . "</tr></td>";
+        echo "<td><a href=delete.php?id=".$row['ID'].">Delete</a></td>";
+        echo "<td><a href=update.php?id=".$row['ID'].">Update</a></td>";
+        echo "<td><img src=HTTP://".$row['Scan'] ."width=60 height=60/></td>";
+
+
     }
-    echo "</table>";
+    echo "</table>";   
 }
 
 else {
@@ -51,8 +68,8 @@ else {
 }
 
 $conn -> close();
-include("Header.php");
 
+include("Header.php");
 
     ?>
 </table>
