@@ -15,13 +15,6 @@ Langauge      : PHP/MYSQL
 Weighting     : 20% 
 Year of Study :  3 
 
-Username  :moss_omalley
-password  :adminPass2020
-CLOUD IP ADDRESS : 10.128.0.1
-<<<<<<< HEAD
-----------------------------
-root
-""
-=======
+
 
 >>>>>>> efef61d9fd4acb11cfb8fef3e41f45f80c64488a
